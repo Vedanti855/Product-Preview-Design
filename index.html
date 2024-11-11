@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Preview Page</title>
+    <style>
+        #main-product-image{
+        width:400px;
+        height:400px;
+        object-fit:cover;
+        border:1px solid black;
+        border-radius:20px;
+        box-shadow:0px opx 10px 0px rgba(0,0,0,0.25);
+        display:block;
+        margin:20px auto;
+        }
+
+        .product-image{
+            height:70px;
+            width:70px;
+            object-fit:cover;
+            border:1px solid black;
+            border-radius:5px;
+            margin:10px;
+            cursor:pointer;
+        }
+
+        .product-image-container{
+            display:flex;
+            justify-content:center;
+
+        }
+    </style>
 </head>
 <body>
     <img src="img/img1.webp" id="main-product-image"/>
+
+    <div class="Product-Preview-container">
+
+        <img src="img/img1.webp" id="main-product-image" onclick="changeImage('img1.webp')"/>
+        <img src="img/img3.webp" id="main-product-image" onclick="changeImage('img3.webp')"/>
+        <img src="img/img4.webp" id="main-product-image" onclick="changeImage('img4.webp')"/>
+        <img src="img/img5.webp" id="main-product-image" onclick="changeImage('img5.webp')"/>
+        <img src="img/img6.webp" id="main-product-image" onclick="changeImage('img6.webp')"/>
+         
+    </div>
+
+    <script> 
+        function changeImage(num){
+            const mainImage=document.getElementById('main-product-image');
+
+            if(num==1){
+                mainImage.src="img1.webp";
+            }else if(num==3){
+                mainImage.src="img3.webp";
+            }else if(num==4){
+                mainImage.src="img4.webp";
+            }else if(num==5){
+                mainImage.src="img5.webp";
+            }else if(num==6){
+                mainImage.src="img6.webp";
+
+            }
+        }
+    </script>
 </body>
 </html>
