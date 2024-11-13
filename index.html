@@ -1,68 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Preview Page</title>
-    <style>
-        #main-product-image{
-        width:400px;
-        height:400px;
-        object-fit:cover;
-        border:1px solid black;
-        border-radius:20px;
-        box-shadow:0px opx 10px 0px rgba(0,0,0,0.25);
-        display:block;
-        margin:20px auto;
-        }
-
-        .product-image{
-            height:70px;
-            width:70px;
-            object-fit:cover;
-            border:1px solid black;
-            border-radius:5px;
-            margin:10px;
-            cursor:pointer;
-        }
-
-        .product-image-container{
-            display:flex;
-            justify-content:center;
-
-        }
-    </style>
+    <title>Assignment-31(Product Preview Design)</title>
+<style>
+#main-img{
+     width:400px;
+     height:400px;
+     object-fit: cover;
+     border:1px solid black;
+     border-radius: 20px;
+     box-shadow:0px 0px 10px 0px rgba(0,0,0,0.75);
+     display:block;
+     margin:20px auto;
+    }
+    #p-img{
+        height: 80px;
+        width:80px;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius:5px;
+        margin:10px;
+        cursor: pointer;
+    }
+    .p-img-container{
+        display: flex;
+        justify-content: center;
+    }
+</style>
 </head>
 <body>
-    <img src="img/img1.webp" id="main-product-image"/>
+<img src="img/img1.webp" id="main-img">
+<div class="p-img-container">
+<img src="img/img1.webp" id="p-img" onclick="changeImage(1)">
 
-    <div class="Product-Preview-container">
-
-        <img src="img/img1.webp" id="main-product-image" onclick="changeImage('img1.webp')"/>
-        <img src="img/img3.webp" id="main-product-image" onclick="changeImage('img3.webp')"/>
-        <img src="img/img4.webp" id="main-product-image" onclick="changeImage('img4.webp')"/>
-        <img src="img/img5.webp" id="main-product-image" onclick="changeImage('img5.webp')"/>
-        <img src="img/img6.webp" id="main-product-image" onclick="changeImage('img6.webp')"/>
-         
-    </div>
-
-    <script> 
-        function changeImage(num){
-            const mainImage=document.getElementById('main-product-image');
-
-            if(num==1){
-                mainImage.src="img1.webp";
-            }else if(num==3){
-                mainImage.src="img3.webp";
-            }else if(num==4){
-                mainImage.src="img4.webp";
-            }else if(num==5){
-                mainImage.src="img5.webp";
-            }else if(num==6){
-                mainImage.src="img6.webp";
-
-            }
-        }
-    </script>
+<img src="img/img2.webp" id="p-img" onclick="changeImage(2)">
+<img src="img/img3.webp" id="p-img" onclick="changeImage(3)">
+<img src="img/img4.webp" id="p-img" onclick="changeImage(4)">
+<img src="img/img5.webp" id="p-img" onclick="changeImage(5)">
+</div>
+<script>
+    function changeImage(num){
+      const mainImg=document.getElementById("main-img");
+      if(num==1){
+        mainImg.src="./img/img1.webp";
+      }else if(num==2){
+        mainImg.src="./img/img2.webp";
+      }else if(num==3){
+        mainImg.src="./img/img3.webp";
+      }else if(num==4){
+        mainImg.src="./img/img4.webp";
+     }else if(num==5){
+       mainImg.src="./img/img5.webp";
+      
+      }
+    }
+</script>
 </body>
 </html>
